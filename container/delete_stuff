@@ -1,0 +1,4 @@
+docker volume ls > D:\Docker\Vol.txt | type D:\Docker\Vol.txt
+docker volume rm
+docker stop vol-nginx
+docker rm vol-nginx

@@ -1,0 +1,2 @@
+https://hub.docker.com/r/rlenferink/minecraft
+docker run -d --name=mc -p 25565:25565 rlenferink/minecraft

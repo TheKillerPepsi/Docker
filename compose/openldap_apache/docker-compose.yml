@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+    web:
+        image: httpd:2.4
+        args:
+            - PHP_SOCKET=php:9000
+        volumes: 
+            - .\data\apache:/var/www/html
+        ports:
+            - "80:80"
+            - "443:443"
+    ldap:
+        image: dinkel/openldap
+        volumes: 
+            - .\data\ldap:/etc/ldap
+            - .\data\ldap:/varl/lib/ldap
+        links: 
+             openldap

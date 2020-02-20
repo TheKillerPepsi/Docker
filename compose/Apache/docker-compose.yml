@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+    web:
+        image: httpd:2.4
+        args:
+            - PHP_SOCKET=php:9000
+        volumes: 
+            - .\apache\htmld:/var/www/html
+        ports:
+            - "80:80"
+            - "443:443"
+        links: 
+            - php
+    portainer:
+        image: portainer/portainer
+        restart: always
+        ports:
+            - "9000:9000"
+        command: --admin-password '$$2y$$12$$E4pAq5GMu1Lprb/ORYKTm.GhmbYnfFl7Hps7anJyQEhqdEIyfwp0m'
+        volumes:
+            # - \\.\pipe\docker_engine:\\.\pipe\docker_engine
+            -  /var/run/docker.sock:/var/run/docker.sock
+            - ./portainer:/data
+
