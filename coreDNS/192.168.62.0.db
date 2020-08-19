@@ -1,0 +1,4 @@
+@       IN  SOA dns.ricardo.com. pepsi.example.com. 2020082541 7200 3600 1209600 3600
+10 IN PTR k8s.ricardo.com.
+11 IN PTR k8s-worker.ricardo.com. 
+19 IN PTR docker.ricardo.com. 
