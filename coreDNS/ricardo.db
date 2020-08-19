@@ -1,0 +1,5 @@
+ricardo.com.        IN  SOA dns.ricardo.com. pepsi.example.com. 2020082541 7200 3600 1209600 3600
+k8s.ricardo.com.    IN  A   192.168.62.10
+k8s-worker.ricardo.com.    IN  A   192.168.62.11
+docker.ricardo.com.   IN  A   192.168.62.19
+host.ricardo.com. IN  CNAME   docker.ricardo.com
