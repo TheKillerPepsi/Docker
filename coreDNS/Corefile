@@ -8,10 +8,11 @@ ricardo.com:53 {
     file /root/ricardo.db
     log
     errors
+    unbound
 }
 
 192.168.62.0/24 {
-    file /root/192.168.62.0
+    file /root/192.168.62-db
     log
     errors
 }
